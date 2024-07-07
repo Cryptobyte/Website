@@ -1,24 +1,24 @@
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function InvestmentsComponent() {
-  // const [loading, setLoading] = useState(true);
-  // const [investments, setInvestments] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [investments, setInvestments] = useState([]);
 
-  // useEffect(() => {
-  //   setLoading(true);
+  useEffect(() => {
+    setLoading(true);
 
-  //   fetch('/api/investments')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setInvestments(data.investments);
-  //       setLoading(false);
-  //     })
-  //     .catch(error => {
-  //       console.error(error);
-  //       setLoading(false);
-  //     });
+    fetch('/api/investments')
+      .then(response => response.json())
+      .then(data => {
+        setInvestments(data.investments);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error(error);
+        setLoading(false);
+      });
       
-  // }, []);
+  }, []);
   
   return (
     <div id="colorlib-work">
@@ -45,8 +45,24 @@ export default function InvestmentsComponent() {
         <div className="row">
           <div className="owl-carousel1">
 
+            {!loading && investments.map((investment: any, index) => (
+              <div key={index} className="item">
+                <div className="col-md-12">
+                  <div className="article">
+                    <img className="img-responsive" src="images/img-1.jpg" alt="html5 bootstrap by colorlib.com" />
+
+                    <div className="desc">
+                      <span className="meta">15, Feb 2018</span>
+                      <h2>{investment.name}</h2>
+                      <p>{investment.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+
             {/* <!-- Begin Loop --> */}
-            <div className="item">
+            {/* <div className="item">
               <div className="col-md-12">
                 <div className="article">
                   <img className="img-responsive" src="images/img-1.jpg" alt="html5 bootstrap by colorlib.com" />
@@ -58,9 +74,9 @@ export default function InvestmentsComponent() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="item">
+            {/* <div className="item">
               <div className="col-md-12">
                 <div className="article">
                   <img className="img-responsive" src="images/img-1.jpg" alt="html5 bootstrap by colorlib.com" />
@@ -72,7 +88,7 @@ export default function InvestmentsComponent() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <!-- End Loop --> */}
 
           </div>
