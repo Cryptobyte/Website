@@ -49,7 +49,10 @@ export default function PortfolioComponent() {
               <div key={index} className="item">
                 <div className="col-md-12">
                   <div className="article">
-                    <img className="img-responsive" src="images/img-1.jpg" alt="html5 bootstrap by colorlib.com" />
+                    <img 
+                      className="img-responsive" 
+                      src={`images/resume/${project.slug}.png`} 
+                      alt={`${project.name} logo`} />
 
                     <div className="desc">
                       <span className="meta">15, Feb 2018</span>
@@ -60,36 +63,6 @@ export default function PortfolioComponent() {
                 </div>
               </div>
             ))}
-
-            {/* <!-- Begin Loop --> */}
-            {/* <div className="item">
-              <div className="col-md-12">
-                <div className="article">
-                  <img className="img-responsive" src="images/img-1.jpg" alt="html5 bootstrap by colorlib.com" />
-
-                  <div className="desc">
-                    <span className="meta">15, Feb 2018</span>
-                    <h2>A Japanese Constellation</h2>
-                    <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove</p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-
-            {/* <div className="item">
-              <div className="col-md-12">
-                <div className="article">
-                  <img className="img-responsive" src="images/img-1.jpg" alt="html5 bootstrap by colorlib.com" />
-
-                  <div className="desc">
-                    <span className="meta">15, Feb 2018</span>
-                    <h2>A Japanese Constellation</h2>
-                    <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove</p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-            {/* <!-- End Loop --> */}
 
           </div>
         </div>

@@ -49,7 +49,10 @@ export default function ProjectsComponent() {
               <div key={index} className="item">
                 <div className="col-md-12">
                   <div className="article">
-                    <img className="img-responsive" src="images/img-1.jpg" alt="html5 bootstrap by colorlib.com" />
+                    <img 
+                      className="img-responsive" 
+                      src={`images/projects/${project.slug}.png`} 
+                      alt={`${project.name} logo`} />
 
                     <div className="desc">
                       <span className="meta">15, Feb 2018</span>
