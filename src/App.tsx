@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 
 import ImportScripts from './Components/ImportScripts';
 
@@ -9,8 +9,8 @@ import InvestmentsComponent from './Components/InvestmentsComponent';
 import ContactComponent from './Components/ContactComponent';
 
 function App() {
-  const [loadingReviews, setLoadingReviews] = useState(true);
-  const [reviews, setReviews] = useState([]);
+  // const [loadingReviews, setLoadingReviews] = useState(true);
+  // const [reviews, setReviews] = useState([]);
 
   ImportScripts([
     "js/jquery.min.js",
@@ -22,21 +22,21 @@ function App() {
     "js/extra.js"
   ]);
 
-  useEffect(() => {
-    setLoadingReviews(true);
+  // useEffect(() => {
+  //   setLoadingReviews(true);
 
-    fetch('/api/reviews')
-      .then(response => response.json())
-      .then(data => {
-        setReviews(data.reviews);
-        setLoadingReviews(false);
-      })
-      .catch(error => {
-        console.error(error);
-        setLoadingReviews(false);
-      });
+  //   fetch('/api/reviews')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setReviews(data.reviews);
+  //       setLoadingReviews(false);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //       setLoadingReviews(false);
+  //     });
 
-  }, []);
+  // }, []);
 
   return (
     <div id="colorlib-page">
