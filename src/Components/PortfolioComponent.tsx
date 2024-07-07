@@ -1,6 +1,17 @@
 // import { useState, useEffect } from 'react';
 
+import ImportScript from "./ImportScript";
+
 export default function PortfolioComponent() {
+  ImportScript("js/jquery.min.js");
+  ImportScript("js/jquery.easing.1.3.js");
+  ImportScript("js/bootstrap.min.js");
+  ImportScript("js/jquery.waypoints.min.js");
+  ImportScript("js/owl.carousel.min.js");
+  ImportScript("js/jquery.magnific-popup.min.js");
+  ImportScript("js/magnific-popup-options.js");
+  ImportScript("js/main.js");
+  
   // const [loading, setLoading] = useState(true);
   // const [resume, setResume] = useState([]);
 
