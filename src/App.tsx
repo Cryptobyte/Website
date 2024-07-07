@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ImportScript from './Components/ImportScript';
+import ImportScripts from './Components/ImportScripts';
 
 import ReviewComponent from './Components/ReviewComponent';
 import PortfolioComponent from './Components/PortfolioComponent';
@@ -9,14 +9,25 @@ import InvestmentsComponent from './Components/InvestmentsComponent';
 import ContactComponent from './Components/ContactComponent';
 
 function App() {
-  ImportScript("js/jquery.min.js");
-  ImportScript("js/jquery.easing.1.3.js");
-  ImportScript("js/bootstrap.min.js");
-  ImportScript("js/jquery.waypoints.min.js");
-  ImportScript("js/owl.carousel.min.js");
-  ImportScript("js/jquery.magnific-popup.min.js");
-  ImportScript("js/magnific-popup-options.js");
-  ImportScript("js/main.js");
+  ImportScripts([
+    "js/jquery.min.js",
+    "js/jquery.easing.1.3.js",
+    "js/bootstrap.min.js",
+    "js/jquery.waypoints.min.js",
+    "js/owl.carousel.min.js",
+    "js/jquery.magnific-popup.min.js",
+    "js/magnific-popup-options.js",
+    "js/main.js"
+  ]);
+
+  // ImportScript("js/jquery.min.js");
+  // ImportScript("js/jquery.easing.1.3.js");
+  // ImportScript("js/bootstrap.min.js");
+  // ImportScript("js/jquery.waypoints.min.js");
+  // ImportScript("js/owl.carousel.min.js");
+  // ImportScript("js/jquery.magnific-popup.min.js");
+  // ImportScript("js/magnific-popup-options.js");
+  // ImportScript("js/main.js");
 
   return (
     <div id="colorlib-page">
