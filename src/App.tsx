@@ -20,7 +20,7 @@ function App() {
     "js/owl.carousel.min.js",
     "js/jquery.magnific-popup.min.js",
     "js/magnific-popup-options.js",
-    "js/main.js"
+    "js/extra.js"
   ]);
 
   useEffect(() => {
