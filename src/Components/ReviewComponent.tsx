@@ -39,7 +39,7 @@ export default function ReviewComponent() {
         </div>
 
         <div className="row">
-          <div className="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+          <div className="col-md-12 col-md-offset-0 text-center intro-heading">
             <span>Testimonies</span>
             <h2>What my Clients &amp; Employers Say</h2>
           </div>
@@ -53,7 +53,7 @@ export default function ReviewComponent() {
           </div>
         </div>
 
-        <div className="row animate-box">
+        <div className="row">
           <div className="owl-carousel">
 
             {!loading && reviews.map((review: any, index) => (
