@@ -1,7 +1,24 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 export default function ProjectsComponent() {
-  const [projects, setProjects] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [projects, setProjects] = useState([]);
+
+  // useEffect(() => {
+  //   setLoading(true);
+
+  //   fetch('/api/projects')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setProjects(data.projects);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //       setLoading(false);
+  //     });
+      
+  // }, []);
   
   return (
     <div id="colorlib-work">

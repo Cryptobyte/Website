@@ -17,7 +17,7 @@ export default function ReviewComponent() {
         console.error(error);
         setLoading(false);
       });
-      
+
   }, []);
   
   return (
@@ -45,29 +45,18 @@ export default function ReviewComponent() {
         <div className="row animate-box">
           <div className="owl-carousel">
 
-            {/* <!-- Begin Loop --> */}
-            <div className="item">
-              <div className="col-md-12 text-center">
-                <div className="testimony">
-                  <blockquote>
-                    <p>"A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                    <span>" &mdash; George Brooks</span>
-                  </blockquote>
+            {!loading && reviews.map((review: any, index) => (
+              <div key={index} className="item">
+                <div className="col-md-12 text-center">
+                  <div className="testimony">
+                    <blockquote>
+                      <p>"{review.quote}"</p>
+                      <span>&mdash; {review.name}, {review.company} @ {review.position}</span>
+                    </blockquote>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="item">
-              <div className="col-md-12 text-center">
-                <div className="testimony">
-                  <blockquote>
-                    <p>"A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                    <span>" &mdash; George Brooks</span>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-            {/* <!-- End Loop --> */}
+            ))}
 
           </div>
         </div>

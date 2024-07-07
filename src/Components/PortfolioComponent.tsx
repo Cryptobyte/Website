@@ -1,7 +1,24 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 export default function PortfolioComponent() {
-  const [projects, setProjects] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [resume, setResume] = useState([]);
+
+  // useEffect(() => {
+  //   setLoading(true);
+
+  //   fetch('/api/resume')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setResume(data.resume);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //       setLoading(false);
+  //     });
+      
+  // }, []);
   
   return (
     <div id="colorlib-work">

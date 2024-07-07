@@ -1,7 +1,24 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 export default function InvestmentsComponent() {
-  const [investments, setInvestments] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [investments, setInvestments] = useState([]);
+
+  // useEffect(() => {
+  //   setLoading(true);
+
+  //   fetch('/api/investments')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setInvestments(data.investments);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //       setLoading(false);
+  //     });
+      
+  // }, []);
   
   return (
     <div id="colorlib-work">
