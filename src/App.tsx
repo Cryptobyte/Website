@@ -19,7 +19,6 @@ function App() {
     "js/jquery.waypoints.min.js",
     "js/owl.carousel.min.js",
     "js/jquery.magnific-popup.min.js",
-    "js/magnific-popup-options.js",
     "js/extra.js"
   ]);
 
