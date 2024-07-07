@@ -1,10 +1,5 @@
 import { useState, useEffect } from 'react';
-// interface Data {
-//   loading: boolean;
-//   reviews: any[];
-// }
 
-// export default function ReviewComponent({ loading, reviews }: Data) {
 export default function ReviewComponent() {
   const [loading, setLoading] = useState(true);
   const [reviews, setReviews] = useState([]);
@@ -55,7 +50,7 @@ export default function ReviewComponent() {
                 <div className="col-md-12 text-center">
                   <div className="testimony">
                     <blockquote>
-                      <p>"{review.quote}"</p>
+                      <p>{review.quote}</p>
                       <span>&mdash; {review.name}, {review.position} @ {review.company}</span>
                     </blockquote>
                   </div>

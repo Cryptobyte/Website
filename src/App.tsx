@@ -1,5 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-
 import ImportScripts from './Components/ImportScripts';
 
 import ReviewComponent from './Components/ReviewComponent';
@@ -9,9 +7,6 @@ import InvestmentsComponent from './Components/InvestmentsComponent';
 import ContactComponent from './Components/ContactComponent';
 
 function App() {
-  // const [loadingReviews, setLoadingReviews] = useState(true);
-  // const [reviews, setReviews] = useState([]);
-
   ImportScripts([
     "js/jquery.min.js",
     "js/jquery.easing.1.3.js",
@@ -21,22 +16,6 @@ function App() {
     "js/jquery.magnific-popup.min.js",
     "js/extra.js"
   ]);
-
-  // useEffect(() => {
-  //   setLoadingReviews(true);
-
-  //   fetch('/api/reviews')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setReviews(data.reviews);
-  //       setLoadingReviews(false);
-  //     })
-  //     .catch(error => {
-  //       console.error(error);
-  //       setLoadingReviews(false);
-  //     });
-
-  // }, []);
 
   return (
     <div id="colorlib-page">
