@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ImportScript from './Components/UseScript';
+import ImportScript from './Components/ImportScript';
 
 import ReviewComponent from './Components/ReviewComponent';
 import PortfolioComponent from './Components/PortfolioComponent';
