@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import ImportScripts from './Components/ImportScripts';
 
@@ -9,6 +9,9 @@ import InvestmentsComponent from './Components/InvestmentsComponent';
 import ContactComponent from './Components/ContactComponent';
 
 function App() {
+  const [loadingReviews, setLoadingReviews] = useState(true);
+  const [reviews, setReviews] = useState([]);
+
   ImportScripts([
     "js/jquery.min.js",
     "js/jquery.easing.1.3.js",
@@ -20,14 +23,21 @@ function App() {
     "js/main.js"
   ]);
 
-  // ImportScript("js/jquery.min.js");
-  // ImportScript("js/jquery.easing.1.3.js");
-  // ImportScript("js/bootstrap.min.js");
-  // ImportScript("js/jquery.waypoints.min.js");
-  // ImportScript("js/owl.carousel.min.js");
-  // ImportScript("js/jquery.magnific-popup.min.js");
-  // ImportScript("js/magnific-popup-options.js");
-  // ImportScript("js/main.js");
+  useEffect(() => {
+    setLoadingReviews(true);
+
+    fetch('/api/reviews')
+      .then(response => response.json())
+      .then(data => {
+        setReviews(data.reviews);
+        setLoadingReviews(false);
+      })
+      .catch(error => {
+        console.error(error);
+        setLoadingReviews(false);
+      });
+
+  }, []);
 
   return (
     <div id="colorlib-page">
@@ -181,7 +191,7 @@ function App() {
 
       <InvestmentsComponent />
 
-      <ReviewComponent />
+      <ReviewComponent loading={loadingReviews} reviews={reviews} />
 
       <ContactComponent />
 

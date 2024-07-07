@@ -1,24 +1,28 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
+interface Data {
+  loading: boolean;
+  reviews: any[];
+}
 
-export default function ReviewComponent() {
-  const [loading, setLoading] = useState(true);
-  const [reviews, setReviews] = useState([]);
+export default function ReviewComponent({ loading, reviews }: Data) {
+  // const [loading, setLoading] = useState(true);
+  // const [reviews, setReviews] = useState([]);
 
-  useEffect(() => {
-    setLoading(true);
+  // useEffect(() => {
+  //   setLoading(true);
 
-    fetch('/api/reviews')
-      .then(response => response.json())
-      .then(data => {
-        setReviews(data.reviews);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error(error);
-        setLoading(false);
-      });
+  //   fetch('/api/reviews')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setReviews(data.reviews);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //       setLoading(false);
+  //     });
 
-  }, []);
+  // }, []);
   
   return (
     <div id="colorlib-testimony">
