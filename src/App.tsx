@@ -190,7 +190,8 @@ function App() {
 
       <InvestmentsComponent />
 
-      <ReviewComponent loading={loadingReviews} reviews={reviews} />
+      {/* <ReviewComponent loading={loadingReviews} reviews={reviews} /> */}
+      <ReviewComponent />
 
       <ContactComponent />
 
