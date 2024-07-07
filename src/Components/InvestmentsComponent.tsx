@@ -28,7 +28,7 @@ export default function InvestmentsComponent() {
         </div>
 
         <div className="row">
-          <div className="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+          <div className="col-md-12 col-md-offset-0 text-center intro-heading">
             <span>Investments</span>
             <h2>Companies I Hold Equity With</h2>
           </div>
@@ -42,7 +42,7 @@ export default function InvestmentsComponent() {
           </div>
         </div>
 
-        <div className="row animate-box">
+        <div className="row">
           <div className="owl-carousel1">
 
             {/* <!-- Begin Loop --> */}

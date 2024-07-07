@@ -28,7 +28,7 @@ export default function ProjectsComponent() {
         </div>
 
         <div className="row">
-          <div className="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+          <div className="col-md-12 col-md-offset-0 text-center intro-heading">
             <span>Projects</span>
             <h2>Projects I've Built</h2>
           </div>
@@ -42,7 +42,7 @@ export default function ProjectsComponent() {
           </div>
         </div>
 
-        <div className="row animate-box">
+        <div className="row">
           <div className="owl-carousel1">
 
             {/* <!-- Begin Loop --> */}

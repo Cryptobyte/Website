@@ -28,7 +28,7 @@ export default function PortfolioComponent() {
         </div>
 
         <div className="row">
-          <div className="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
+          <div className="col-md-12 col-md-offset-0 text-center intro-heading">
             <span>Resume</span>
             <h2>Companies I've Worked With</h2>
           </div>
@@ -42,7 +42,7 @@ export default function PortfolioComponent() {
           </div>
         </div>
 
-        <div className="row animate-box">
+        <div className="row">
           <div className="owl-carousel1">
 
             {/* <!-- Begin Loop --> */}

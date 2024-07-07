@@ -67,7 +67,7 @@ function App() {
           </div>
 
           <div className="row">
-            <div className="col-md-5 animate-box about-avatar-wrap">
+            <div className="col-md-5 about-avatar-wrap">
               <div className="item">
                 <img
                   className="img-responsive about-img about-avatar" 
@@ -77,7 +77,7 @@ function App() {
               </div>
             </div>
 
-            <div className="col-md-6 col-md-push-1 animate-box">
+            <div className="col-md-6 col-md-push-1">
               <div className="about-desc">
                 <div className="item">
                   <h2><span>Cryptobyte</span></h2>
@@ -114,7 +114,7 @@ function App() {
               <div className="services-flex">
                 <div className="one-third">
                   <div className="row">
-                    <div className="col-md-12 col-md-offset-0 animate-box intro-heading">
+                    <div className="col-md-12 col-md-offset-0 intro-heading">
                       <span>My Services</span>
                       <h2>Here Are Some of My Skills</h2>
                     </div>
@@ -128,7 +128,7 @@ function App() {
                     </div>
 
                     <div className="col-md-6">
-                      <div className="services animate-box">
+                      <div className="services">
                         <h3>1 - Backend Development</h3>
                         <ul>
                           <li>NodeJS, Javascript &amp; TypeScript</li>
@@ -138,7 +138,7 @@ function App() {
                         </ul>
                       </div>
 
-                      <div className="services animate-box">
+                      <div className="services">
                         <h3>3 - Frontend Development</h3>
                         <ul>
                           <li>React &amp; React Native</li>
@@ -150,7 +150,7 @@ function App() {
                     </div>
 
                     <div className="col-md-6">
-                      <div className="services animate-box">
+                      <div className="services">
                         <h3>2 - Cloud Infrastructure</h3>
                         <ul>
                           <li>Amazon Web Services (AWS)</li>
@@ -160,7 +160,7 @@ function App() {
                         </ul>
                       </div>
 
-                      <div className="services animate-box">
+                      <div className="services">
                         <h3>4 - DevOps</h3>
                         <ul>
                           <li>Github</li>
