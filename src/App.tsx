@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import 'react-multi-carousel/lib/styles.css';
-import '@coreui/coreui/dist/css/coreui.min.css';
+// import '@coreui/coreui/dist/css/coreui.min.css';
 
 import ReviewComponent from './Components/ReviewComponent';
 import PortfolioComponent from './Components/PortfolioComponent';
