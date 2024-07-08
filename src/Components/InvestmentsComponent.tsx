@@ -50,7 +50,7 @@ export default function InvestmentsComponent() {
           <CarouselComponent>
 
             {!loading && investments.map((investment: any, index) => (
-              <CCarouselItem key={index} className="item">
+              <CCarouselItem key={index}>
                 <div className="col-md-12">
                   <div className="article">
                     <img 

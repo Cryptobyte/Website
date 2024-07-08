@@ -48,7 +48,7 @@ export default function ReviewComponent() {
           <CarouselComponent>
 
             {!loading && reviews.map((review: any, index) => (
-              <CCarouselItem key={index} className="item">
+              <CCarouselItem key={index}>
                 <div className="col-md-12 text-center">
                   <div className="testimony">
                     <blockquote>
