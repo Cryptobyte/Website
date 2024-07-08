@@ -17,10 +17,10 @@ function App() {
     const src: string[] = [
       // "js/jquery.min.js",
       // "js/jquery.easing.1.3.js",
-      "js/bootstrap.min.js",
-      "js/jquery.waypoints.min.js",
-      "js/owl.carousel.min.js",
-      "js/jquery.magnific-popup.min.js",
+      // "js/bootstrap.min.js",
+      // "js/jquery.waypoints.min.js",
+      // "js/owl.carousel.min.js",
+      // "js/jquery.magnific-popup.min.js",
       "js/extra.js"
     ];
 
