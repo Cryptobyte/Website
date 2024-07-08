@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import CarouselComponent from './CarouselComponent';
 
 export default function InvestmentsComponent() {
   const [loading, setLoading] = useState(true);
@@ -6,7 +7,7 @@ export default function InvestmentsComponent() {
 
   useEffect(() => {
     console.log('InvestmentsComponent: useEffect');
-    
+
     setLoading(true);
 
     fetch('/api/investments')
@@ -45,14 +46,14 @@ export default function InvestmentsComponent() {
         </div>
 
         <div className="row">
-          <div className="owl-carousel1">
+          <CarouselComponent>
 
             {!loading && investments.map((investment: any, index) => (
               <div key={index} className="item">
                 <div className="col-md-12">
                   <div className="article">
                     <img 
-                      className="img-responsive" 
+                      className="img-responsive carousel-image" 
                       src={`images/investments/${investment.slug}.png`} 
                       alt={`${investment.name} logo`} />
 
@@ -66,7 +67,7 @@ export default function InvestmentsComponent() {
               </div>
             ))}
 
-          </div>
+          </CarouselComponent>
         </div>
       </div>
     </div>

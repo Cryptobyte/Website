@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import CarouselComponent from './CarouselComponent';
 
 export default function ProjectsComponent() {
   const [loading, setLoading] = useState(true);
@@ -6,7 +7,7 @@ export default function ProjectsComponent() {
 
   useEffect(() => {
     console.log('ProjectsComponent: useEffect');
-    
+
     setLoading(true);
 
     fetch('/api/projects')
@@ -45,16 +46,16 @@ export default function ProjectsComponent() {
         </div>
 
         <div className="row">
-          <div className="owl-carousel1">
+          <CarouselComponent>
 
             {!loading && projects.map((project: any, index) => (
               <div key={index} className="item">
                 <div className="col-md-12">
                   <div className="article">
-                    <img 
-                      className="img-responsive" 
-                      src={`images/projects/${project.slug}.png`} 
-                      alt={`${project.name} logo`} />
+                  <img 
+                    className="img-responsive carousel-image" 
+                    src={`images/projects/${project.slug}.png`} 
+                    alt={`${project.name} logo`} />
 
                     <div className="desc">
                       <span className="meta">15, Feb 2018</span>
@@ -66,7 +67,7 @@ export default function ProjectsComponent() {
               </div>
             ))}
 
-          </div>
+          </CarouselComponent>
         </div>
       </div>
     </div>

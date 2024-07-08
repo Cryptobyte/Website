@@ -1,25 +1,5 @@
 import { useState, useEffect } from 'react';
-
-import Marquee from 'react-fast-marquee';
-import Carousel from 'react-multi-carousel';
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1
-  }
-};
+import CarouselComponent from './CarouselComponent';
 
 export default function PortfolioComponent() {
   const [loading, setLoading] = useState(true);
@@ -66,13 +46,7 @@ export default function PortfolioComponent() {
         </div>
 
         <div className="row">
-          <Carousel
-            autoPlay
-            showDots
-            responsive={responsive}
-            keyBoardControl={false}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}>
+          <CarouselComponent>
 
             {!loading && resume.map((project: any, index) => (
               <div key={index} className="item">
@@ -86,19 +60,14 @@ export default function PortfolioComponent() {
                     <div className="desc">
                       <span className="meta">15, Feb 2018</span>
                       <h2>{project.name}</h2>
-
-                      <p>
-                        <Marquee pauseOnHover direction={'down'}>
-                          {project.description}
-                        </Marquee>
-                      </p>
+                      <p>{project.description}</p>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
-
-          </Carousel>
+            
+          </CarouselComponent>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import CarouselComponent from './CarouselComponent';
 
 export default function ReviewComponent() {
   const [loading, setLoading] = useState(true);
@@ -43,7 +44,7 @@ export default function ReviewComponent() {
         </div>
 
         <div className="row">
-          <div className="owl-carousel">
+          <CarouselComponent single>
 
             {!loading && reviews.map((review: any, index) => (
               <div key={index} className="item">
@@ -58,7 +59,7 @@ export default function ReviewComponent() {
               </div>
             ))}
 
-          </div>
+          </CarouselComponent>
         </div>
       </div>
     </div>
