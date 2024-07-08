@@ -29,9 +29,9 @@ function App() {
 
     let scripts: any[] = [];
     for (let _script of src) {
-      console.log(`Importing script: ${_script}`);
+      console.log(`Importing script: ${_script.url}`);
       const script = document.createElement('script');
-      script.src = _script;
+      script.src = _script.url;
       script.addEventListener("load", () => {
         _script.loaded = true;
         if (src.every(script => script.loaded)) {
