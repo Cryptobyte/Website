@@ -9,17 +9,17 @@ export async function onRequest(context) {
         links: [
           { title: 'Website', href: 'https://mindpaint.app' }
         ],
-        description: 'Cryptobyte architected the cloud infrastructure in AWS, developed scalable and secure NodeJS backend with MongoDB, assisted with frontend development in React.'
+        description: 'MindPaint is an AI powered coloring page generator. Using the power of AI you can generate coloring book style pages of anything you can dream of, print it out and color it.'
       },
       {
         slug: 'codestore',
-        name: 'CodeStore',
+        name: 'Code Store',
         year: '2024',
         tags: ['TypeScript', 'React', 'NodeJS', 'ExpressJS', 'MongoDB', 'AWS'],
         links: [
           { title: 'Website', href: 'https://codestore.ai' }
         ],
-        description: 'Cryptobyte wrote the AI integrations on CloudFlare worker edge functions, assisted with building out the React frontend and built out the hosting infrastructure / CD pipelines.'
+        description: 'Code Store is a place for Swift developers to sell their Swift Package Manager packages without rolling out the infrastructure to set up a secure sales platform on their own.'
       },
       { 
         slug: 'kwiks',
@@ -29,7 +29,7 @@ export async function onRequest(context) {
         links: [
           { title: 'Website', href: 'https://kwiks.com' }
         ],
-        description: 'Cryptobyte acted as a lead technical resource at Kwiks. Building scalable infrastructure in Amazon Web Services (AWS), a high performance TypeScript & NodeJS backend and assisted with Kwiks mobile app development in Swift with a focus on API integration.'
+        description: 'Kwiks is a video sharing platform similar to TikTok where both creators and viewers can earn money. Creators can earn money by creating videos that people watch and viewers can earn money by watching and interacting with videos.'
       },
       { 
         slug: 'otis',
@@ -41,7 +41,7 @@ export async function onRequest(context) {
           { title: 'iOS', href: 'https://apps.apple.com/us/app/otis-ai-market-your-business/id1451423564?uo=4&at=11l6hc&app=itunes&ct=fnd' },
           { title: 'Android', href: 'https://play.google.com/store/apps/details?id=com.otis&hl=en_US&gl=US' }
         ],
-        description: 'Otis AI is an AI driven marketing tool for small business that helps small business publish smart advertisements across platforms using data from many existing sources. Cryptobyte worked on Full Stack Development with NodeJS, ExpressJS and React Native (iOS & Android). Setup and maintained CI/CD pipelines to multiple environments including backend, web and mobile app beta and production distributions. Mentored and trained multiple junior developers on staff and lead the development team from the start of the project up to over 5000 users and 15 team members.'
+        description: 'Otis AI is a tool that helps small businesses with advertising on social media. It uses AI to create and manage targeted ads from business data for social media platforms.'
       },
     ]
   };
