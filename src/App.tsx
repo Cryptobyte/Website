@@ -34,6 +34,9 @@ function App() {
       script.src = _script.url;
       script.addEventListener("load", () => {
         _script.loaded = true;
+
+        console.log(`Loaded script: ${_script.url}`, src);
+
         if (src.every(script => script.loaded)) {
           setLoading(false);
         }
@@ -41,6 +44,9 @@ function App() {
 
       script.addEventListener("error", () => {
         _script.loaded = true;
+
+        console.log(`Error loading script: ${_script.url}`, src);
+
         if (src.every(script => script.loaded)) {
           setLoading(false);
         }
