@@ -20,13 +20,20 @@ export default function ContactComponent() {
 
     setLoading(true);
 
-    const _data = JSON.stringify(formData);
+    const data = JSON.stringify(formData);
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: data
+    });
 
-    // TODO: Send Request..
+    console.log(response);
 
     // Simulate network
     setTimeout(() => {
-      console.log(_data);
+      console.log(data);
 
       setFormData({
         name: '',
