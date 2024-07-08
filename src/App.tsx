@@ -17,13 +17,17 @@ function App() {
   const loadScript = async(_script: any): Promise<any> => {
     return new Promise((resolve, reject) => {
       console.log(`Importing script: ${_script.url}`);
+
       const script = document.createElement('script');
+
       script.src = _script.url;
       script.addEventListener("load", () => {
+        console.log(`Loaded script: ${_script.url}`);
         resolve(script);
       });
 
       script.addEventListener("error", () => {
+        console.log(`Error loading script: ${_script.url}`);
         reject(script);
       });
 
@@ -47,7 +51,6 @@ function App() {
         { loaded: false, url: "js/extra.js" }
       ];
 
-      
       for (let _script of src) {
         const script = await loadScript(_script);
 
