@@ -4,6 +4,7 @@ export default function ImportScripts(src: string[]) {
   useEffect(() => {
     let scripts: any[] = [];
     for (let _script of src) {
+      console.log(`Importing script: ${_script}`);
       const script = document.createElement('script');
       script.src = _script;
       document.body.appendChild(script);

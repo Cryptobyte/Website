@@ -5,6 +5,8 @@ export default function PortfolioComponent() {
   const [resume, setResume] = useState([]);
 
   useEffect(() => {
+    console.log('PortfolioComponent: useEffect');
+    
     setLoading(true);
 
     fetch('/api/resume')

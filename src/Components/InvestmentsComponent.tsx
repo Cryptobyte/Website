@@ -5,6 +5,8 @@ export default function InvestmentsComponent() {
   const [investments, setInvestments] = useState([]);
 
   useEffect(() => {
+    console.log('InvestmentsComponent: useEffect');
+    
     setLoading(true);
 
     fetch('/api/investments')

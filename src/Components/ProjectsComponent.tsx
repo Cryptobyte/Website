@@ -5,6 +5,8 @@ export default function ProjectsComponent() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
+    console.log('ProjectsComponent: useEffect');
+    
     setLoading(true);
 
     fetch('/api/projects')
