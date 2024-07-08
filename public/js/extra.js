@@ -3,16 +3,16 @@
 	'use strict';
 
 	// iPad and iPod detection	
-	var isiPad = function(){
-		return (navigator.platform.indexOf("iPad") != -1);
-	};
+	// var isiPad = function(){
+	// 	return (navigator.platform.indexOf("iPad") != -1);
+	// };
 
-	var isiPhone = function(){
-	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
-			(navigator.platform.indexOf("iPod") != -1)
-	    );
-	};
+	// var isiPhone = function(){
+	//     return (
+	// 		(navigator.platform.indexOf("iPhone") != -1) || 
+	// 		(navigator.platform.indexOf("iPod") != -1)
+	//     );
+	// };
 
 
 	var fullHeight = function() {
@@ -24,22 +24,22 @@
 
 	};
 
-	var burgerMenu = function() {
+	// var burgerMenu = function() {
 
-		$('.js-colorlib-nav-toggle').on('click', function(event) {
-			event.preventDefault();
-			var $this = $(this);
-			if( $('body').hasClass('menu-show') ) {
-				$('body').removeClass('menu-show');
-				$('#colorlib-main-nav > .js-colorlib-nav-toggle').removeClass('show');
-			} else {
-				$('body').addClass('menu-show');
-				setTimeout(function(){
-					$('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
-				}, 900);
-			}
-		})
-	};
+	// 	$('.js-colorlib-nav-toggle').on('click', function(event) {
+	// 		event.preventDefault();
+	// 		var $this = $(this);
+	// 		if( $('body').hasClass('menu-show') ) {
+	// 			$('body').removeClass('menu-show');
+	// 			$('#colorlib-main-nav > .js-colorlib-nav-toggle').removeClass('show');
+	// 		} else {
+	// 			$('body').addClass('menu-show');
+	// 			setTimeout(function(){
+	// 				$('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
+	// 			}, 900);
+	// 		}
+	// 	})
+	// };
 
 	// Animations
 
@@ -164,7 +164,7 @@
 	// Document on load.
 	$(function(){
 		fullHeight();
-		burgerMenu();
+		// burgerMenu();
 		counterWayPoint();
 		// contentWayPoint();
 		owlCarouselFeatureSlide();
