@@ -58,7 +58,6 @@ export default function InvestmentsComponent() {
                       alt={`${investment.name} logo`} />
 
                     <div className="desc">
-                      <span className="meta">{investment.year}</span>
                       <h2>{investment.name}</h2>
                       <p>{investment.description}</p>
                     </div>
