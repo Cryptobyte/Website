@@ -65,24 +65,13 @@ export default function PortfolioComponent() {
         </div>
 
         <div className="row">
-          {/* <div className="owl-carousel1"> */}
-
           <Carousel
-            swipeable={false}
-            draggable={false}
-            showDots={false}
+            autoPlay
+            showDots
             responsive={responsive}
-            infinite={true}
-            autoPlaySpeed={1000}
             keyBoardControl={false}
-            customTransition="all .5"
-            transitionDuration={500}
             containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-            // deviceType={this.props.deviceType}
-            // dotListClass="custom-dot-list-style"
-            // itemClass="carousel-item-padding-40-px"
-            >
+            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}>
 
             {!loading && resume.map((project: any, index) => (
               <div key={index} className="item">
@@ -104,8 +93,6 @@ export default function PortfolioComponent() {
             ))}
 
           </Carousel>
-
-          {/* </div> */}
         </div>
       </div>
     </div>
