@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import CarouselComponent from './CarouselComponent';
+import { CCarouselItem } from '@coreui/react';
 
 export default function InvestmentsComponent() {
   const [loading, setLoading] = useState(true);
@@ -49,7 +50,7 @@ export default function InvestmentsComponent() {
           <CarouselComponent>
 
             {!loading && investments.map((investment: any, index) => (
-              <div key={index} className="item">
+              <CCarouselItem key={index} className="item">
                 <div className="col-md-12">
                   <div className="article">
                     <img 
@@ -63,7 +64,7 @@ export default function InvestmentsComponent() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </CCarouselItem>
             ))}
 
           </CarouselComponent>

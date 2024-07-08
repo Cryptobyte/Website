@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import CarouselComponent from './CarouselComponent';
 import CardComponent from './CardComponent';
+import { CCarouselItem } from '@coreui/react';
 
 export default function PortfolioComponent() {
   const [loading, setLoading] = useState(true);
@@ -50,15 +51,18 @@ export default function PortfolioComponent() {
           <CarouselComponent>
 
             {!loading && resume.map((project: any, index) => (
-              <CardComponent
-                key={index}
-                slug={project.slug}
-                name={project.name}
-                year={project.year}
-                tags={project.tags}
-                links={project.links}
-                description={project.description}
-                image={`images/resume/${project.slug}.png`} />
+              <CCarouselItem>
+                <CardComponent
+                  key={index}
+                  slug={project.slug}
+                  name={project.name}
+                  year={project.year}
+                  tags={project.tags}
+                  links={project.links}
+                  description={project.description}
+                  image={`images/resume/${project.slug}.png`} />
+
+              </CCarouselItem>
             ))}
             
           </CarouselComponent>

@@ -1,17 +1,12 @@
 import {
-  CCarousel,
-  CCarouselItem
+  CCarousel
 
 } from '@coreui/react';
 
 export default function CarouselComponent({ children }) {
   return (
     <CCarousel controls indicators>
-      {children.map((child, index) => (
-        <CCarouselItem key={index}>
-          {child}
-        </CCarouselItem>
-      ))}
+      {children}
     </CCarousel>
   )
 }

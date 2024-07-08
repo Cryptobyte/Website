@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import CarouselComponent from './CarouselComponent';
+import { CCarouselItem } from '@coreui/react';
 
 export default function ReviewComponent() {
   const [loading, setLoading] = useState(true);
@@ -47,7 +48,7 @@ export default function ReviewComponent() {
           <CarouselComponent>
 
             {!loading && reviews.map((review: any, index) => (
-              <div key={index} className="item">
+              <CCarouselItem key={index} className="item">
                 <div className="col-md-12 text-center">
                   <div className="testimony">
                     <blockquote>
@@ -56,7 +57,7 @@ export default function ReviewComponent() {
                     </blockquote>
                   </div>
                 </div>
-              </div>
+              </CCarouselItem>
             ))}
 
           </CarouselComponent>
