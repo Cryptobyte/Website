@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+import Marquee from 'react-fast-marquee';
 import Carousel from 'react-multi-carousel';
 
 const responsive = {
@@ -77,15 +78,20 @@ export default function PortfolioComponent() {
               <div key={index} className="item">
                 <div className="col-md-12">
                   <div className="article">
-                    <img 
-                      className="img-responsive carousel-image" 
-                      src={`images/resume/${project.slug}.png`} 
-                      alt={`${project.name} logo`} />
+                  <img 
+                    className="img-responsive carousel-image" 
+                    src={`images/resume/${project.slug}.png`} 
+                    alt={`${project.name} logo`} />
 
                     <div className="desc">
                       <span className="meta">15, Feb 2018</span>
                       <h2>{project.name}</h2>
-                      <p>{project.description}</p>
+
+                      <p>
+                        <Marquee pauseOnHover direction={'down'}>
+                          {project.description}
+                        </Marquee>
+                      </p>
                     </div>
                   </div>
                 </div>

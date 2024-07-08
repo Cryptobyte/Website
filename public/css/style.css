@@ -1827,8 +1827,5 @@ input[type="text"] {
 
 .carousel-image {
   width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  object-fit: scale-down;
 }
