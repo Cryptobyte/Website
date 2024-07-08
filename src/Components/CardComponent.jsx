@@ -14,7 +14,7 @@ import mapIcon from '../Utilities/iconMapper';
 
 export default function CardComponent({ slug, name, year, tags, links, image, description }) {
   return (
-    <CCard textBgColor={'light'}>
+    <CCard textBgColor={'light'} className="d-block w-100">
       <CCardImage orientation="top" src={image} />
       
       <CCardBody>
