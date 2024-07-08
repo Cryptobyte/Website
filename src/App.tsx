@@ -7,25 +7,16 @@ import ProjectsComponent from './Components/ProjectsComponent';
 import InvestmentsComponent from './Components/InvestmentsComponent';
 import ContactComponent from './Components/ContactComponent';
 
-export function Effect({ effect }: any) {
+function Effect({ effect }: any) {
   useEffect(() => effect?.(), [effect]);
   return null;
 }
 
 function App() {
-  // ImportScripts([
-  //   "js/jquery.min.js",
-  //   "js/jquery.easing.1.3.js",
-  //   "js/bootstrap.min.js",
-  //   "js/jquery.waypoints.min.js",
-  //   "js/owl.carousel.min.js",
-  //   "js/jquery.magnific-popup.min.js",
-  //   "js/extra.js"
-  // ]);
   const stableEffect = useCallback(() => {
     const src: string[] = [
-      "js/jquery.min.js",
-      "js/jquery.easing.1.3.js",
+      // "js/jquery.min.js",
+      // "js/jquery.easing.1.3.js",
       "js/bootstrap.min.js",
       "js/jquery.waypoints.min.js",
       "js/owl.carousel.min.js",
@@ -53,7 +44,7 @@ function App() {
   return (
     <div id="colorlib-page">
       <Effect effect={stableEffect} />
-      
+
       <header>
         <div className="container">
           <div className="row">
