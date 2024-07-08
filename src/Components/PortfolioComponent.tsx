@@ -78,7 +78,7 @@ export default function PortfolioComponent() {
                 <div className="col-md-12">
                   <div className="article">
                     <img 
-                      className="img-responsive" 
+                      className="img-responsive carousel-image" 
                       src={`images/resume/${project.slug}.png`} 
                       alt={`${project.name} logo`} />
 
