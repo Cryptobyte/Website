@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
+import 'react-multi-carousel/lib/styles.css';
+
 import ReviewComponent from './Components/ReviewComponent';
 import PortfolioComponent from './Components/PortfolioComponent';
 import ProjectsComponent from './Components/ProjectsComponent';
