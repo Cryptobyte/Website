@@ -4,9 +4,9 @@
     "display": "browser",
     "scope": "/",
     "start_url": "/",
-    "name": "Cryptobyte | Development, DevOps, Security",
+    "name": "Cryptobyte",
     "short_name": "Cryptobyte",
-    "description": "A life long learner, code artisan & security enthusiast with over 13 years of experience writing software for all kinds of systems.",
+    "description": "Senior Software Developer, security enthusiast and life long learner with over 13 years of experience writing software for all kinds of systems.",
     "icons": [
         {
             "src": "/icon-192x192.png",
