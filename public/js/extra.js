@@ -166,7 +166,7 @@
 		fullHeight();
 		burgerMenu();
 		counterWayPoint();
-		contentWayPoint();
+		// contentWayPoint();
 		owlCarouselFeatureSlide();
 	});
 
