@@ -42,44 +42,22 @@ function App() {
 
     const fn = async() => {
       const src: any[] = [
-        { loaded: false, url: "js/jquery.min.js" },
-        { loaded: false, url: "js/jquery.easing.1.3.js" },
-        { loaded: false, url: "js/bootstrap.min.js" },
-        { loaded: false, url: "js/jquery.waypoints.min.js" },
-        { loaded: false, url: "js/owl.carousel.min.js" },
-        { loaded: false, url: "js/jquery.magnific-popup.min.js" },
-        { loaded: false, url: "js/extra.js" }
+        { url: "js/jquery.min.js" },
+        { url: "js/jquery.easing.1.3.js" },
+        { url: "js/bootstrap.min.js" },
+        { url: "js/jquery.waypoints.min.js" },
+        { url: "js/owl.carousel.min.js" },
+        { url: "js/jquery.magnific-popup.min.js" },
+        { url: "js/extra.js" }
       ];
 
       for (let _script of src) {
         const script = await loadScript(_script);
-
-        // console.log(`Importing script: ${_script.url}`);
-        // const script = document.createElement('script');
-        // script.src = _script.url;
-        // script.addEventListener("load", () => {
-        //   _script.loaded = true;
-
-        //   console.log(`Loaded script: ${_script.url}`, src);
-
-        //   if (src.every(script => script.loaded)) {
-        //     setLoading(false);
-        //   }
-        // });
-
-        // script.addEventListener("error", () => {
-        //   _script.loaded = true;
-
-        //   console.log(`Error loading script: ${_script.url}`, src);
-
-        //   if (src.every(script => script.loaded)) {
-        //     setLoading(false);
-        //   }
-        // });
-
-        // document.body.appendChild(script);
+        
         scripts.push(script);
       }
+
+      setLoading(false);
     }
 
     fn();
