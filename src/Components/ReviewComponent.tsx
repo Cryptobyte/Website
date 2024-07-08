@@ -44,7 +44,7 @@ export default function ReviewComponent() {
         </div>
 
         <div className="row">
-          <CarouselComponent single>
+          <CarouselComponent>
 
             {!loading && reviews.map((review: any, index) => (
               <div key={index} className="item">
