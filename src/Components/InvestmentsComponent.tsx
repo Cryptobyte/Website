@@ -34,7 +34,7 @@ export default function InvestmentsComponent() {
         <div className="row">
           <div className="col-md-12 col-md-offset-0 text-center intro-heading">
             <span>Investments</span>
-            <h2>Companies I Hold Equity With</h2>
+            <h2>Startup Equity I'm Holding</h2>
           </div>
         </div>
 
