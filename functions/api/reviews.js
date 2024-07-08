@@ -17,7 +17,7 @@ export async function onRequest(context) {
         name: "Maximillian Cannon",
         position: "Lead Web Developer",
         company: "Center for Nutrition Studies",
-        quote: "Cryptobyte are very skilled and fast developers. They finished our Node.js script project within a day of accepting the contract and did it within budget. I'll gladly work with them again!"
+        quote: "Cryptobyte is a very skilled and fast developer. He finished our Node.js script project within a day of accepting the contract and did it within budget. I'll gladly work with him again!"
       },
       {
         name: "Saiakhil Kovvur",

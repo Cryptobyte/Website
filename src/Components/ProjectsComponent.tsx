@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import CarouselComponent from './CarouselComponent';
-import { CCarouselItem } from '@coreui/react';
 import CardComponent from './CardComponent';
 
 export default function ProjectsComponent() {
@@ -51,7 +50,7 @@ export default function ProjectsComponent() {
           <CarouselComponent>
 
             {!loading && projects.map((project: any, index) => (
-              <CCarouselItem key={index}>
+              <div key={index}>
                 <CardComponent
                   key={index}
                   slug={project.slug}
@@ -62,7 +61,7 @@ export default function ProjectsComponent() {
                   description={project.description}
                   image={`images/projects/${project.slug}.png`} />
 
-              </CCarouselItem>
+              </div>
             ))}
 
           </CarouselComponent>

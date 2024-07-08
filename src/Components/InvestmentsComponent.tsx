@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import CarouselComponent from './CarouselComponent';
-import { CCarouselItem } from '@coreui/react';
 import CardComponent from './CardComponent';
 
 export default function InvestmentsComponent() {
@@ -51,7 +50,7 @@ export default function InvestmentsComponent() {
           <CarouselComponent>
 
             {!loading && investments.map((investment: any, index) => (
-              <CCarouselItem key={index}>
+              <div key={index}>
                 <CardComponent
                   key={index}
                   slug={investment.slug}
@@ -62,7 +61,7 @@ export default function InvestmentsComponent() {
                   description={investment.description}
                   image={`images/investments/${investment.slug}.png`} />
 
-              </CCarouselItem>
+              </div>
             ))}
 
           </CarouselComponent>

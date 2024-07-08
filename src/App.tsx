@@ -1,12 +1,24 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import 'react-multi-carousel/lib/styles.css';
+import { 
+  SiGithub, 
+  SiGitlab, 
+  SiLinkedin, 
+  SiMastodon
+
+} from '@icons-pack/react-simple-icons';
 
 import ReviewComponent from './Components/ReviewComponent';
 import PortfolioComponent from './Components/PortfolioComponent';
 import ProjectsComponent from './Components/ProjectsComponent';
 import InvestmentsComponent from './Components/InvestmentsComponent';
 import ContactComponent from './Components/ContactComponent';
+
+import '@coreui/coreui/dist/css/coreui.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-multi-carousel/lib/styles.css';
+import './css/style.css';
+import { CTooltip } from '@coreui/react';
 
 function Effect({ effect }: any) {
   useEffect(() => effect?.(), [effect]);
@@ -18,18 +30,14 @@ function App() {
 
   const loadScript = async(_script: any): Promise<any> => {
     return new Promise((resolve, reject) => {
-      console.log(`Importing script: ${_script.url}`);
-
       const script = document.createElement('script');
 
       script.src = _script.url;
       script.addEventListener("load", () => {
-        console.log(`Loaded script: ${_script.url}`);
         resolve(script);
       });
 
       script.addEventListener("error", () => {
-        console.log(`Error loading script: ${_script.url}`);
         reject(script);
       });
 
@@ -45,10 +53,6 @@ function App() {
     const fn = async() => {
       const src: any[] = [
         { url: "js/jquery.min.js" },
-        { url: "js/jquery.easing.1.3.js" },
-        { url: "js/bootstrap.min.js" },
-        { url: "js/jquery.waypoints.min.js" },
-        { url: "js/jquery.magnific-popup.min.js" },
         { url: "js/extra.js" }
       ];
 
@@ -130,8 +134,29 @@ function App() {
                       </p>
                       
                       <p className="colorlib-social-icons">
-                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/cryptobyte/"><i className="icon-linkedin"></i></a>
-                        <a target="_blank" rel="noreferrer" href="https://github.com/Cryptobyte"><i className="icon-github"></i></a>
+                        <CTooltip content="LinkedIn">
+                          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/cryptobyte/">
+                              <SiLinkedin />
+                          </a>
+                        </CTooltip>
+
+                        <CTooltip content="Mastodon">
+                          <a target="_blank" rel="noreferrer" href="https://fosstodon.org/@cryptobyte">
+                            <SiMastodon />
+                          </a>
+                        </CTooltip>
+
+                        <CTooltip content="Github">
+                          <a target="_blank" rel="noreferrer" href="https://github.com/Cryptobyte">
+                            <SiGithub />
+                          </a>
+                        </CTooltip>
+
+                        <CTooltip content="Gitlab">
+                          <a target="_blank" rel="noreferrer" href="https://gitlab.com/Cryptobyte">
+                            <SiGitlab />
+                          </a>
+                        </CTooltip>
                       </p>
                     </div>
                   </div>

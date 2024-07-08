@@ -1,6 +1,22 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { 
+  SiElegoo, 
+  SiGmail, 
+  SiGooglemaps 
+
+} from '@icons-pack/react-simple-icons';
+
+import { 
+  CToast, 
+  CToastBody, 
+  CToaster
+
+} from '@coreui/react';
 
 export default function ContactComponent() {
+  const toaster = useRef();
+
+  const [toast, addToast] = useState(0);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -8,14 +24,14 @@ export default function ContactComponent() {
     message: ''
   });
 
-  const handleInputChange = (event: { target: { name: any; value: any; }; }) => {
+  const handleInputChange = (event) => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     });
   };
 
-  const handleSubmit = async (event: { preventDefault: () => void; }) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     setLoading(true);
@@ -32,8 +48,7 @@ export default function ContactComponent() {
     const json = await response.json();
 
     if (!json.success) {
-      // TODO: Replace later on with something more elegant..
-      alert('An error occurred while sending the message.');
+      addToast(notification('danger', 'Failed to send message!'));
 
     } else {
       setFormData({
@@ -44,7 +59,16 @@ export default function ContactComponent() {
     }
 
     setLoading(false);
+    addToast(notification('success', 'Message recieved, we\'ll be in touch soon!'));
   };
+
+  const notification = (color, message) => (
+    <CToast color={color} className="text-white align-items-center">
+      <div className="d-flex">
+        <CToastBody>{message}</CToastBody>
+      </div>
+    </CToast>
+  );
 
   return (
     <div id="colorlib-contact">
@@ -75,9 +99,9 @@ export default function ContactComponent() {
                 <h3>My Address</h3>
                 
                 <ul className="contact-info">
-                  <li><span><i className="icon-map5"></i></span>Concord, New Hampshire 03301</li>
-                  <li><span><i className="icon-envelope2"></i></span><a href="mailto:me@cryptobyte.dev">me@cryptobyte.dev</a></li>
-                  <li><span><i className="icon-globe3"></i></span><a href="/">cryptobyte.dev</a></li>
+                  <li><span><SiGooglemaps size={25} /></span>Concord, New Hampshire 03301</li>
+                  <li><span><SiGmail size={25} /></span><a href="mailto:me@cryptobyte.dev">me@cryptobyte.dev</a></li>
+                  <li><span><SiElegoo size={25} /></span><a href="/">cryptobyte.dev</a></li>
                 </ul>
               </div>
 
@@ -153,6 +177,8 @@ export default function ContactComponent() {
           </div>
         </div>
       </div>
+
+      <CToaster className="p-3" placement="top-end" push={toast} ref={toaster} />
     </div>
   )
 }

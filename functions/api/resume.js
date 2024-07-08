@@ -29,7 +29,7 @@ export async function onRequest(context) {
         year: '2017-2019',
         tags: ['Javascript', 'Backend', 'Mobile', 'NodeJS', 'React Native', 'Swift', 'Java', 'ExpressJS', 'MongoDB'],
         links: [
-          { title: 'Company', href: 'https://meeplabs.com' }
+          { title: 'Website', href: 'https://meeplabs.com' }
         ],
         description: 'MeepLabs was a SaaS company developing software in many forms for clients across the globe. Cryptobyte worked on several projects for MeepLabs clients including multiple Swift iOS applications, React Native (iOS & Android) applications, Android TV applications and backend systems for each project. As defacto team lead within the organization Cryptobyte was responsible for each client project as it came in and was passed through the development pipeline, working with every part of the application development lifecycle and working to meet client expectations while balancing time and effort.'
       },

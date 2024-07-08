@@ -6,7 +6,8 @@ import {
   CCardLink,
   CCardSubtitle,
   CCardText,
-  CCardTitle
+  CCardTitle,
+  CTooltip
 
 } from '@coreui/react';
 
@@ -14,8 +15,19 @@ import mapIcon from '../Utilities/iconMapper';
 
 export default function CardComponent({ slug, name, year, tags, links, image, description }) {
   return (
-    <CCard textBgColor={'light'} className="d-block w-100">
-      <CCardImage orientation="top" src={image} />
+    <CCard 
+      className='border-0' 
+      style={{ 
+        maxWidth: '370px',
+        '--cui-card-color': 'gray',
+        '--cui-card-bg': '#fafafa',
+        '--cui-card-cap-bg': '#f8f9fa'
+      }}>
+
+      <CCardImage 
+        orientation="top" 
+        src={image} 
+        style={{ height: '350px', maxWidth: '350px', objectFit: 'scale-down' }} />
       
       <CCardBody>
         <CCardTitle>{name}</CCardTitle>
@@ -23,18 +35,25 @@ export default function CardComponent({ slug, name, year, tags, links, image, de
           {year}
         </CCardSubtitle>
 
-        <CCardText>{description}</CCardText>
+        <CCardText style={{ height: '200px', overflow: 'scroll' }}>
+          {description}
+        </CCardText>
 
         {links.map((link, index) => (
           <CCardLink key={index} href={link.href}>{link.title}</CCardLink>
         ))}
       </CCardBody>
 
-      <CCardFooter>
+      <CCardFooter className='border-0'>
         {tags.map((tag, index) => {
           const Icon = mapIcon(tag);
 
-          return Icon ? <Icon /> : (<></>);
+          return Icon ? (
+            <CTooltip content={tag} key={index}>
+              <Icon size={18} style={{ marginRight: '5px' }} />
+            </CTooltip>
+          
+          ) : (<></>);
         })}
       </CCardFooter>
     </CCard>
