@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import CarouselComponent from './CarouselComponent';
+import CardComponent from './CardComponent';
 
 export default function PortfolioComponent() {
   const [loading, setLoading] = useState(true);
@@ -49,21 +50,30 @@ export default function PortfolioComponent() {
           <CarouselComponent>
 
             {!loading && resume.map((project: any, index) => (
-              <div key={index} className="item">
-                <div className="col-md-12">
-                  <div className="article">
-                  <img 
-                    className="img-responsive carousel-image" 
-                    src={`images/resume/${project.slug}.png`} 
-                    alt={`${project.name} logo`} />
+              // <div key={index} className="item">
+              //   <div className="col-md-12">
+              //     <div className="article">
+              //     <img 
+              //       className="img-responsive carousel-image" 
+              //       src={`images/resume/${project.slug}.png`} 
+              //       alt={`${project.name} logo`} />
 
-                    <div className="desc">
-                      <h2>{project.name}</h2>
-                      <p>{project.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              //       <div className="desc">
+              //         <h2>{project.name}</h2>
+              //         <p>{project.description}</p>
+              //       </div>
+              //     </div>
+              //   </div>
+              // </div>
+              <CardComponent
+                key={index}
+                slug={project.slug}
+                name={project.name}
+                year={project.year}
+                tags={project.tags}
+                links={project.links}
+                description={project.description}
+                image={`images/resume/${project.slug}.png`} />
             ))}
             
           </CarouselComponent>
