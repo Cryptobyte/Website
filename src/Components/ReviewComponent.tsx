@@ -51,7 +51,7 @@ export default function ReviewComponent() {
                 <div className="col-md-12 text-center">
                   <div className="testimony">
                     <blockquote>
-                      <p>{review.quote}</p>
+                      <p>"{review.quote}"</p>
                       <span>&mdash; {review.name}, {review.position} @ {review.company}</span>
                     </blockquote>
                   </div>

@@ -4,6 +4,7 @@ export async function onRequest(context) {
       {
         slug: 'mindpaint',
         name: 'MindPaint',
+        year: '2024',
         tags: ['TypeScript', 'React', 'Web Workers', 'OpenAI', 'CloudFlare'],
         links: [
           { title: 'Website', href: 'https://mindpaint.app' }
@@ -13,6 +14,7 @@ export async function onRequest(context) {
       {
         slug: 'codestore',
         name: 'CodeStore',
+        year: '2024',
         tags: ['TypeScript', 'React', 'NodeJS', 'ExpressJS', 'MongoDB', 'AWS'],
         links: [
           { title: 'Website', href: 'https://codestore.ai' }
@@ -22,6 +24,7 @@ export async function onRequest(context) {
       { 
         slug: 'kwiks',
         name: 'Kwiks',
+        year: '2024',
         tags: ['TypeScript', 'DevOps', 'Backend', 'Mobile', 'NodeJS', 'Swift', 'AWS', 'ExpressJS', 'MongoDB'],
         links: [
           { title: 'Website', href: 'https://kwiks.com' }
@@ -31,6 +34,7 @@ export async function onRequest(context) {
       { 
         slug: 'otis',
         name: 'Otis AI',
+        year: '2021',
         tags: ['Javascript', 'TypeScript', 'DevOps', 'Backend', 'Mobile', 'NodeJS', 'React Native', 'AWS', 'ExpressJS', 'MongoDB'],
         links: [
           { title: 'Web', href: 'https://meetotis.com' },

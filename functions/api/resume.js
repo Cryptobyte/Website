@@ -4,6 +4,7 @@ export async function onRequest(context) {
       { 
         slug: 'kwiks',
         name: 'Kwiks',
+        year: '2023-2024',
         tags: ['TypeScript', 'DevOps', 'Backend', 'Mobile', 'NodeJS', 'Swift', 'AWS', 'ExpressJS', 'MongoDB'],
         links: [
           { title: 'Website', href: 'https://kwiks.com' }
@@ -13,6 +14,7 @@ export async function onRequest(context) {
       { 
         slug: 'otis',
         name: 'Otis AI',
+        year: '2019-2021',
         tags: ['Javascript', 'TypeScript', 'DevOps', 'Backend', 'Mobile', 'NodeJS', 'React Native', 'AWS', 'ExpressJS', 'MongoDB'],
         links: [
           { title: 'Web', href: 'https://meetotis.com' },
@@ -24,6 +26,7 @@ export async function onRequest(context) {
       { 
         slug: 'meeplabs',
         name: 'MeepLabs',
+        year: '2017-2019',
         tags: ['Javascript', 'Backend', 'Mobile', 'NodeJS', 'React Native', 'Swift', 'Java', 'ExpressJS', 'MongoDB'],
         links: [
           { title: 'Company', href: 'https://meeplabs.com' }
@@ -33,6 +36,7 @@ export async function onRequest(context) {
       {
         slug: 'lawlsec',
         name: 'Lawlsec',
+        year: '2012-2017',
         tags: ['HTML', 'CSS', 'Linux', 'PHP', 'MySQL', 'Wordpress'],
         links: [],
         description: 'LawlSec was my first freelance agency working with local small business clients to build websites, web applications and modernizing infrastructure. Cryptobyte worked on several projects for LawlSec clients including Wordpress websites, custom PHP applications and Linux server administration.'

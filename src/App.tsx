@@ -212,7 +212,7 @@ function App() {
 
                     <div 
                       className="one-forth services-img" 
-                      style={{ backgroundImage: 'url(images/services-img-1.jpg)' }}>
+                      style={{ backgroundImage: 'url(images/services.png)' }}>
 
                     </div>
                   </div>

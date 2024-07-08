@@ -1257,13 +1257,14 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 .testimony blockquote p {
   font-family: "Playfair Display", Georgia, serif;
   color: #000;
-  font-size: 30px;
+  font-size: 20px;
+  font-style: italic;
 }
 
 .testimony blockquote span {
   font-family: "Playfair Display", Georgia, serif;
   color: #000;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .f-entry {
@@ -1827,5 +1828,6 @@ input[type="text"] {
 
 .carousel-image {
   width: 100%;
+  min-height: 360px;
   object-fit: scale-down;
 }

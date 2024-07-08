@@ -33,7 +33,7 @@ export default function ProjectsComponent() {
         <div className="row">
           <div className="col-md-12 col-md-offset-0 text-center intro-heading">
             <span>Projects</span>
-            <h2>Projects I've Built</h2>
+            <h2>Projects I've Worked On</h2>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ export default function ProjectsComponent() {
                     alt={`${project.name} logo`} />
 
                     <div className="desc">
-                      <span className="meta">15, Feb 2018</span>
+                      <span className="meta">{project.year}</span>
                       <h2>{project.name}</h2>
                       <p>{project.description}</p>
                     </div>

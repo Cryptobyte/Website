@@ -4,6 +4,7 @@ export async function onRequest(context) {
       {
         slug: 'mindpaint',
         name: 'MindPaint',
+        year: '2024',
         tags: ['TypeScript', 'React', 'Web Workers', 'OpenAI', 'CloudFlare'],
         links: [
           { title: 'Website', href: 'https://mindpaint.app' }
@@ -13,6 +14,7 @@ export async function onRequest(context) {
       {
         slug: 'codestore',
         name: 'CodeStore',
+        year: '2024',
         tags: ['TypeScript', 'React', 'NodeJS', 'ExpressJS', 'MongoDB', 'AWS'],
         links: [
           { title: 'Website', href: 'https://codestore.ai' }
@@ -22,6 +24,7 @@ export async function onRequest(context) {
       {
         slug: 'everystate',
         name: 'EveryState',
+        year: '2021',
         tags: ['Javascript', 'DevOps', 'Backend', 'NodeJS', 'PostgreSQL'],
         links: [
           { title: 'Website', href: 'https://everystate.com' }
@@ -31,6 +34,7 @@ export async function onRequest(context) {
       {
         slug: 'jump',
         name: 'Jump',
+        year: '2022',
         tags: ['DevOps', 'AWS', 'WireGuard', 'Github Actions', 'CI/CD', 'DataDog'],
         links: [
           { title: 'Website', href: 'https://jump.co' }
@@ -40,6 +44,7 @@ export async function onRequest(context) {
       {
         slug: '3go',
         name: '3Go',
+        year: '2022',
         tags: ['TypeScript', 'DevOps', 'Backend', 'NodeJS', 'NestJS', 'AWS', 'PostgreSQL'],
         links: [
           { title: 'Website', href: 'https://app.3go.com' }
@@ -49,6 +54,7 @@ export async function onRequest(context) {
       {
         slug: 'cherokee',
         name: 'Cherokee Acquisition',
+        year: '2018',
         tags: ['Javascript', 'HTML', 'CSS', 'React Native', 'NodeJS', 'ExpressJS', 'MongoDB'],
         links: [
           { title: 'Website', href: 'https://www.cherokeeacq.com/' },
@@ -60,6 +66,7 @@ export async function onRequest(context) {
       {
         slug: 'lq',
         name: 'LQ',
+        year: '2019',
         tags: ['Swift', 'NodeJS', 'ExpressJS'],
         links: [],
         description: 'LQ was an iOS app and backend system designed to bring auditory therapy and meditation to users. Developed in conjunction with Meeplabs this app that heavily utilized system audio features. Cryptobyte developed both the iOS app and the backend system for this project.'
@@ -67,6 +74,7 @@ export async function onRequest(context) {
       {
         slug: 'f8date',
         name: 'F8Date',
+        year: '2017',
         tags: ['React Native', 'WebSockets'],
         links: [],
         description: 'F8Date was a modern dating application that used AI on the backend to help ensure that each user was in fact a real person. Cryptobyte created a cross platform mobile app with React Native we had to work with animations in React Native and consuming authenticated WebSockets for the chat feature among other real time connectivity features.'
@@ -74,6 +82,7 @@ export async function onRequest(context) {
       {
         slug: 'pearup',
         name: 'PearUp',
+        year: '2017',
         tags: ['NodeJS', 'ExpressJS', 'React Native'],
         links: [],
         description: 'PearUp is an iOS app to help people meet up in real life. Cryptobyte developed the PearUp app in conjunction with MeepLabs using modern Swift and Alamonfire for HTTP communication with their API.'
@@ -81,6 +90,7 @@ export async function onRequest(context) {
       {
         slug: 'velvet',
         name: 'Velvet Magazine',
+        year: '2018',
         tags: ['Javascript', 'React Native', 'NodeJS', 'MongoDB'],
         links: [
           { title: 'Android', href: 'https://play.google.com/store/apps/details?id=com.velvet.mag&hl=en_IN&gl=US' }
@@ -90,6 +100,7 @@ export async function onRequest(context) {
       {
         slug: 'vibez',
         name: 'Vibez',
+        year: '2017',
         tags: ['Swift'],
         links: [],
         description: 'Implemented last minute features in the iOS app for App Store submission in Swift on a sharp deadline to make sure the client met their release timeline when the former team had failed to implement the changes needed for App Store submission.'
@@ -97,6 +108,7 @@ export async function onRequest(context) {
       {
         slug: 'meepcraft',
         name: 'MeepCraft',
+        year: '2016',
         tags: ['Java', 'Minecraft', 'Game Server', 'Sever Administration'],
         links: [
           { title: 'Website', href: 'http://meepcraft.com/' },

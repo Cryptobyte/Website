@@ -58,7 +58,7 @@ export default function PortfolioComponent() {
                     alt={`${project.name} logo`} />
 
                     <div className="desc">
-                      <span className="meta">15, Feb 2018</span>
+                      <span className="meta">{project.year}</span>
                       <h2>{project.name}</h2>
                       <p>{project.description}</p>
                     </div>
