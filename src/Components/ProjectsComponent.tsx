@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import CarouselComponent from './CarouselComponent';
 import { CCarouselItem } from '@coreui/react';
+import CardComponent from './CardComponent';
 
 export default function ProjectsComponent() {
   const [loading, setLoading] = useState(true);
@@ -51,19 +52,16 @@ export default function ProjectsComponent() {
 
             {!loading && projects.map((project: any, index) => (
               <CCarouselItem key={index}>
-                <div className="col-md-12">
-                  <div className="article">
-                  <img 
-                    className="img-responsive carousel-image" 
-                    src={`images/projects/${project.slug}.png`} 
-                    alt={`${project.name} logo`} />
+                <CardComponent
+                  key={index}
+                  slug={project.slug}
+                  name={project.name}
+                  year={project.year}
+                  tags={project.tags}
+                  links={project.links}
+                  description={project.description}
+                  image={`images/projects/${project.slug}.png`} />
 
-                    <div className="desc">
-                      <h2>{project.name}</h2>
-                      <p>{project.description}</p>
-                    </div>
-                  </div>
-                </div>
               </CCarouselItem>
             ))}
 
