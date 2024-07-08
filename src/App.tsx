@@ -14,47 +14,72 @@ function Effect({ effect }: any) {
 function App() {
   const [loading, setLoading] = useState(true);
 
-  const stableEffect = useCallback(() => {
-    setLoading(true);
-
-    const src: any[] = [
-      { loaded: false, url: "js/jquery.min.js" },
-      { loaded: false, url: "js/jquery.easing.1.3.js" },
-      { loaded: false, url: "js/bootstrap.min.js" },
-      { loaded: false, url: "js/jquery.waypoints.min.js" },
-      { loaded: false, url: "js/owl.carousel.min.js" },
-      { loaded: false, url: "js/jquery.magnific-popup.min.js" },
-      { loaded: false, url: "js/extra.js" }
-    ];
-
-    let scripts: any[] = [];
-    for (let _script of src) {
+  const loadScript = async(_script: any): Promise<any> => {
+    return new Promise((resolve, reject) => {
       console.log(`Importing script: ${_script.url}`);
       const script = document.createElement('script');
       script.src = _script.url;
       script.addEventListener("load", () => {
-        _script.loaded = true;
-
-        console.log(`Loaded script: ${_script.url}`, src);
-
-        if (src.every(script => script.loaded)) {
-          setLoading(false);
-        }
+        resolve(script);
       });
 
       script.addEventListener("error", () => {
-        _script.loaded = true;
-
-        console.log(`Error loading script: ${_script.url}`, src);
-
-        if (src.every(script => script.loaded)) {
-          setLoading(false);
-        }
+        reject(script);
       });
 
       document.body.appendChild(script);
-      scripts.push(script);
+    });
+  };
+
+  const stableEffect = useCallback(() => {
+    setLoading(true);
+
+    let scripts: any[] = [];
+
+    const fn = async() => {
+      const src: any[] = [
+        { loaded: false, url: "js/jquery.min.js" },
+        { loaded: false, url: "js/jquery.easing.1.3.js" },
+        { loaded: false, url: "js/bootstrap.min.js" },
+        { loaded: false, url: "js/jquery.waypoints.min.js" },
+        { loaded: false, url: "js/owl.carousel.min.js" },
+        { loaded: false, url: "js/jquery.magnific-popup.min.js" },
+        { loaded: false, url: "js/extra.js" }
+      ];
+
+      
+      for (let _script of src) {
+        const script = await loadScript(_script);
+
+        // console.log(`Importing script: ${_script.url}`);
+        // const script = document.createElement('script');
+        // script.src = _script.url;
+        // script.addEventListener("load", () => {
+        //   _script.loaded = true;
+
+        //   console.log(`Loaded script: ${_script.url}`, src);
+
+        //   if (src.every(script => script.loaded)) {
+        //     setLoading(false);
+        //   }
+        // });
+
+        // script.addEventListener("error", () => {
+        //   _script.loaded = true;
+
+        //   console.log(`Error loading script: ${_script.url}`, src);
+
+        //   if (src.every(script => script.loaded)) {
+        //     setLoading(false);
+        //   }
+        // });
+
+        // document.body.appendChild(script);
+        scripts.push(script);
+      }
     }
+
+    fn();
     
     return () => {
       for (let script of scripts) {
