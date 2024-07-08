@@ -48,7 +48,6 @@ function App() {
         { url: "js/jquery.easing.1.3.js" },
         { url: "js/bootstrap.min.js" },
         { url: "js/jquery.waypoints.min.js" },
-        { url: "js/owl.carousel.min.js" },
         { url: "js/jquery.magnific-popup.min.js" },
         { url: "js/extra.js" }
       ];
