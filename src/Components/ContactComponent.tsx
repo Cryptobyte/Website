@@ -29,21 +29,21 @@ export default function ContactComponent() {
       body: data
     });
 
-    console.log(response);
+    const json = await response.json();
 
-    // Simulate network
-    setTimeout(() => {
-      console.log(data);
+    if (!json.success) {
+      // TODO: Replace later on with something more elegant..
+      alert('An error occurred while sending the message.');
 
+    } else {
       setFormData({
         name: '',
         email: '',
         message: ''
       });
+    }
 
-      setLoading(false);
-      
-    }, 1000);
+    setLoading(false);
   };
 
   return (

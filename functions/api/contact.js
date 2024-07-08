@@ -2,7 +2,11 @@ export async function onRequestPost(context) {
   const body = await context.request.clone().json();
 
   if (!body.name || !body.email || !body.message) {
-    return new Response(JSON.stringify({ success: false, error: "Missing required fields" }), {
+    return new Response(JSON.stringify({ 
+      success: false, 
+      error: "Missing required fields" 
+    
+    }), {
       status: 400,
       headers: {
         "Content-Type": "application/json"
@@ -11,7 +15,7 @@ export async function onRequestPost(context) {
   }
 
   try {
-    const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
+    await fetch('https://api.sendgrid.com/v3/mail/send', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${context.env.SENDGRID_API_KEY}`,
@@ -52,9 +56,6 @@ export async function onRequestPost(context) {
       })
     });
 
-    // for testing..
-    console.log(response);
-
   } catch (err) {
     return new Response(JSON.stringify({ 
       success: false, 
@@ -66,7 +67,6 @@ export async function onRequestPost(context) {
         "Content-Type": "application/json"
       }
     });
-  
   }
 
   return new Response(JSON.stringify({ success: true }), {
