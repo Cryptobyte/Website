@@ -93,9 +93,9 @@ function App() {
                         alt='Cryptobyte' />
 
                     </a>
-                  </div>
 
-                  <a href="#colorlib-contact" className="btn btn-primary btn-outline header-contact">Contact</a>
+                    <a href="#colorlib-contact" className="btn btn-primary btn-outline header-contact">Contact</a>
+                  </div>
                 </div>
               </div>
             </div>
