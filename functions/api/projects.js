@@ -9,7 +9,7 @@ export async function onRequest(context) {
         links: [
           { title: 'Website', href: 'https://mindpaint.app' }
         ],
-        description: 'Cryptobyte architected the cloud infrastructure in AWS, developed scalable and secure NodeJS backend with MongoDB, assisted with frontend development in React.'
+        description: 'Cryptobyte wrote the AI integrations on CloudFlare worker edge functions, assisted with building out the React frontend and built out the hosting infrastructure / CD pipelines.'
       },
       {
         slug: 'codestore',
@@ -19,7 +19,7 @@ export async function onRequest(context) {
         links: [
           { title: 'Website', href: 'https://codestore.ai' }
         ],
-        description: 'Cryptobyte wrote the AI integrations on CloudFlare worker edge functions, assisted with building out the React frontend and built out the hosting infrastructure / CD pipelines.'
+        description: 'Cryptobyte architected the cloud infrastructure in AWS, developed scalable and secure NodeJS backend with MongoDB, assisted with frontend development in React.'
       },
       {
         slug: 'everystate',
