@@ -11,7 +11,7 @@ import {
 import ReviewComponent from './Components/ReviewComponent';
 import PortfolioComponent from './Components/PortfolioComponent';
 import ProjectsComponent from './Components/ProjectsComponent';
-import InvestmentsComponent from './Components/InvestmentsComponent';
+// import InvestmentsComponent from './Components/InvestmentsComponent';
 import ContactComponent from './Components/ContactComponent';
 
 import '@coreui/coreui/dist/css/coreui.min.css';
@@ -250,7 +250,7 @@ function App() {
           
           <ProjectsComponent />
 
-          <InvestmentsComponent />
+          { /* <InvestmentsComponent /> */ }
 
           <ReviewComponent />
 
