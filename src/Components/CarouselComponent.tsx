@@ -44,11 +44,11 @@ export default function CarouselComponent({ children, single = false }: Props) {
   return (
     <Carousel 
       responsive={(single) ? _single : _multi}
-      arrows={false}
+      arrows={true}
       renderDotsOutside
       pauseOnHover
-      showDots
-      autoPlay
+      showDots={false}
+      autoPlay={false}
       rewind>
 
       {children}
