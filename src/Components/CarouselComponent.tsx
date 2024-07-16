@@ -46,7 +46,7 @@ export default function CarouselComponent({ children, single = false }: Props) {
       responsive={(single) ? _single : _multi}
       arrows={true}
       renderDotsOutside
-      renderButtonGroupOutside
+      // renderButtonGroupOutside // TODO: Try CSS Approach
       pauseOnHover
       showDots={false}
       autoPlay={false}
