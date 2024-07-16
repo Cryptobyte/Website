@@ -1526,3 +1526,18 @@ input[type="text"] {
   object-fit: scale-down;
 }
 
+.gd-carousel {
+  position: unset;
+
+  .react-multiple-carousel__arrow {
+    position: absolute;
+  }
+
+  .react-multiple-carousel__arrow--left {
+    left: calc(10% + 1px)
+  }
+
+  .react-multiple-carousel__arrow--right {
+    right: calc(10% + 1px)
+  }
+}

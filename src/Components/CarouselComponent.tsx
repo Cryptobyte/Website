@@ -44,9 +44,9 @@ export default function CarouselComponent({ children, single = false }: Props) {
   return (
     <Carousel 
       responsive={(single) ? _single : _multi}
+      className="gd-carousel"
       arrows={true}
       renderDotsOutside
-      // renderButtonGroupOutside // TODO: Try CSS Approach
       pauseOnHover
       showDots={false}
       autoPlay={false}
