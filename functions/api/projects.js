@@ -39,7 +39,7 @@ export async function onRequest(context) {
         links: [
           { title: 'Website', href: 'https://jump.co' }
         ],
-        description: 'Jump is an NFT marketplace backed by real world collectables and a platform for partners that would like to bring their real world physical assets into the NFT space. Cryptobyte developed the infrastructure for the Jump platform including its AWS Elastic Beanstalk instances for multiple enviornments, secure private cloud protected by a WireGuard bastion instance and more. We also developed the continuous integration and deployment scripts to deploy updates from Github directly into their associated enviornment infrastructure.'
+        description: 'Jump is an NFT marketplace backed by real world collectables and a platform for partners that would like to bring their real world physical assets into the NFT space. Cryptobyte developed the infrastructure for the Jump platform including its AWS Elastic Beanstalk instances for multiple enviornments, secure private cloud protected by a WireGuard bastion instance and more. Cryptobyte also developed the continuous integration and deployment systems to deploy updates from Github directly into their associated enviornment infrastructure.'
       },
       {
         slug: '3go',
@@ -61,7 +61,7 @@ export async function onRequest(context) {
           { title: 'Claims Market', href: 'https://claims-market.com/' },
           { title: 'Put Market', href: 'https://www.claimsputmarket.com/' }
         ],
-        description: 'Cryptobyte worked on several projects for Cherokee Acquisition in conjunction with Meeplabs including a multi platform mobile app called Mineral Market and several websites with their respective backends. Including the main landing page and market websites.'
+        description: 'Cryptobyte worked on several projects for Cherokee Acquisition in conjunction with Meeplabs including a multi-platform mobile app called Mineral Market and several websites with their respective backends. Including the main landing page and market websites.'
       },
       {
         slug: 'lq',
@@ -77,7 +77,7 @@ export async function onRequest(context) {
         year: '2017',
         tags: ['React Native', 'WebSockets'],
         links: [],
-        description: 'F8Date was a modern dating application that used AI on the backend to help ensure that each user was in fact a real person. Cryptobyte created a cross platform mobile app with React Native we had to work with animations in React Native and consuming authenticated WebSockets for the chat feature among other real time connectivity features.'
+        description: 'F8Date was a modern dating application that used AI on the backend to help ensure that each user was in fact a real person. Cryptobyte created a cross platform mobile app with React Native. Cryptobyte worked with animations in React Native and consuming authenticated WebSockets for the chat feature among other real time connectivity features.'
       },
       {
         slug: 'pearup',
@@ -85,7 +85,7 @@ export async function onRequest(context) {
         year: '2017',
         tags: ['NodeJS', 'ExpressJS', 'React Native'],
         links: [],
-        description: 'PearUp is an iOS app to help people meet up in real life. Cryptobyte developed the PearUp app in conjunction with MeepLabs using modern Swift and Alamonfire for HTTP communication with their API.'
+        description: 'PearUp is an iOS app to help people meet up in real life. Cryptobyte developed the PearUp app in conjunction with MeepLabs using modern Swift and Alamonfire for HTTP communication with an existing backend API.'
       },
       {
         slug: 'velvet',
@@ -95,7 +95,7 @@ export async function onRequest(context) {
         links: [
           { title: 'Android', href: 'https://play.google.com/store/apps/details?id=com.velvet.mag&hl=en_IN&gl=US' }
         ],
-        description: 'Velvet is a popular Dubai magazine that needed a cross platform app to build their online presence. Working in conjunction with Meeplabs we developed the Velvet Magazine mobile app and backend system to bring their website into the mobile market. This React Native app required a lot of custom UI to match client spec and we were able to bring the clients vision to reality.'
+        description: 'Velvet is a popular Dubai magazine that needed a cross platform app to build their online presence. Working in conjunction with Meeplabs, Cryptobyte developed the Velvet Magazine mobile app and backend system to bring their website into the mobile market.'
       },
       {
         slug: 'vibez',
@@ -103,7 +103,7 @@ export async function onRequest(context) {
         year: '2017',
         tags: ['Swift'],
         links: [],
-        description: 'Implemented last minute features in the iOS app for App Store submission in Swift on a sharp deadline to make sure the client met their release timeline when the former team had failed to implement the changes needed for App Store submission.'
+        description: 'Cryptobyte implemented last minute features in the iOS app for App Store submission in Swift on a sharp deadline to make sure the client met their release timeline when the former team had failed to implement the changes needed for App Store submission.'
       },
       {
         slug: 'meepcraft',

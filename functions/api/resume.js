@@ -39,7 +39,7 @@ export async function onRequest(context) {
         year: '2012-2017',
         tags: ['HTML', 'CSS', 'Linux', 'PHP', 'MySQL', 'Wordpress'],
         links: [],
-        description: 'LawlSec was my first freelance agency working with local small business clients to build websites, web applications and modernizing infrastructure. Cryptobyte worked on several projects for LawlSec clients including Wordpress websites, custom PHP applications and Linux server administration.'
+        description: 'LawlSec was a freelance development agency working with local small business clients to build websites, web applications and modernizing infrastructure. Cryptobyte worked on several projects for Lawlsec clients including Wordpress websites, custom PHP applications and Linux server administration.'
       }
     ]
   };
