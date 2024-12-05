@@ -141,7 +141,8 @@ function App() {
                         </CTooltip>
 
                         <CTooltip content="Mastodon">
-                          <a target="_blank" rel="noreferrer" href="https://fosstodon.org/@cryptobyte">
+                          {/* eslint-disable-next-line react/jsx-no-target-blank */}
+                          <a target="_blank" rel="me"  href="https://fosstodon.org/@cryptobyte">
                             <SiMastodon />
                           </a>
                         </CTooltip>
