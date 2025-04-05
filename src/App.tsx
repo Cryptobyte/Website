@@ -95,6 +95,7 @@ function App() {
                     </a>
 
                     <a href="#colorlib-contact" className="btn btn-primary btn-outline header-contact">Contact</a>
+                    <a href="https://blog.cryptobyte.dev" className="btn btn-primary btn-outline header-contact">Blog</a>
                   </div>
                 </div>
               </div>
